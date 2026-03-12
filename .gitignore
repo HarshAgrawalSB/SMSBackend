@@ -61,8 +61,6 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -135,3 +133,6 @@ Thumbs.db
 # Build artifacts
 build/
 dist/
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
