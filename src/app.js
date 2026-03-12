@@ -42,6 +42,22 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
+// Root route for Vercel
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Student Enrollment API is running',
+    version: '1.0.0',
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      users: '/api/users',
+      leads: '/api/leads',
+      students: '/api/students',
+      programs: '/api/programs'
+    }
+  });
+});
+
 app.use(errorMiddleware);
 
 module.exports = app;
